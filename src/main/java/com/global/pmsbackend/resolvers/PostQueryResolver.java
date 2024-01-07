@@ -12,8 +12,8 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-@Component
 @RequiredArgsConstructor
+@Component
 public class PostQueryResolver implements GraphQLQueryResolver {
 
     private final PostService postService;

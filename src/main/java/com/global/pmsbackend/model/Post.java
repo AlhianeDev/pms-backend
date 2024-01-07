@@ -1,5 +1,6 @@
 package com.global.pmsbackend.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 
 import lombok.AllArgsConstructor;
@@ -28,8 +29,10 @@ public class Post {
 
     private String content;
 
+    @JsonProperty("noOfLikes")
     private int noOfLikes;
 
+    @JsonProperty("isDisplay")
     private boolean isDisplay;
 
     @OneToMany(

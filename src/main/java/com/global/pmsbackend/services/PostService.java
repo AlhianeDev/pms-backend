@@ -34,7 +34,7 @@ public class PostService {
 
             throw new ResourceNotFoundException(
 
-                "Unable to find post with given post id :" + postId
+                404, "Unable to find post with given post id :" + postId
 
             );
 
@@ -68,7 +68,7 @@ public class PostService {
 
             throw new ResourceNotFoundException(
 
-                "Unable to find post with given post id :"+ postId
+                404, "Unable to find post with given post id :"+ postId
 
             );
 

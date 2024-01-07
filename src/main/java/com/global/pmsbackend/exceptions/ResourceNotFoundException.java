@@ -1,37 +1,17 @@
 package com.global.pmsbackend.exceptions;
 
-import graphql.ErrorClassification;
+import lombok.Getter;
 
-import graphql.ErrorType;
+@Getter
+public class ResourceNotFoundException extends RuntimeException {
 
-import graphql.GraphQLError;
+    private final int statusCode;
 
-import graphql.language.SourceLocation;
-
-
-import java.util.List;
-
-public class ResourceNotFoundException
-
-    extends RuntimeException implements GraphQLError {
-
-    public ResourceNotFoundException(String message) {
+    public ResourceNotFoundException(int statusCode, String message) {
 
         super(message);
 
-    }
-
-    @Override
-    public List<SourceLocation> getLocations() {
-
-        return null;
-
-    }
-
-    @Override
-    public ErrorClassification getErrorType() {
-
-        return ErrorType.DataFetchingException;
+        this.statusCode = statusCode;
 
     }
 
