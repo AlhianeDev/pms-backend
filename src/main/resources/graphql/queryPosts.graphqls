@@ -1,0 +1,31 @@
+type Query {
+
+    allPosts: [Post]
+
+    getPost(postId: Int!): Post
+
+}
+
+type Post {
+
+    id: Int
+
+    name: String
+
+    content: String
+
+    noOfLikes: Int
+
+    isDisplay: Boolean
+
+    comments: [Comment]
+
+}
+
+type Comment {
+
+    id: Int
+
+    commentContent: String
+
+}

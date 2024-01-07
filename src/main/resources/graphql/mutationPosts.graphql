@@ -1,0 +1,19 @@
+type Mutation {
+
+    createPost(post: PostDto): Post
+
+    deletePost(postId: Int!): String
+
+}
+
+input PostDto {
+
+    name: String
+
+    content: String
+
+    noOfLikes: Int
+
+    isDisplay: Boolean
+
+}
